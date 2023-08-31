@@ -14,7 +14,7 @@ public class CustomerController {
     @Autowired
     private ICustomerService customerService;
 
-    @GetMapping("/")
+    @GetMapping({"/create-customer", "/"})
     public ModelAndView showCreateForm() {
         ModelAndView modelAndView = new ModelAndView("/customer/create");
         modelAndView.addObject("customer", new Customer());

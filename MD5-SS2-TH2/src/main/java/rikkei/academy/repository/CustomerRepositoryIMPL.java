@@ -8,9 +8,10 @@ import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 @Transactional
-public class CustomerRepositoryIMPL implements ICustomerRepository{
+public class CustomerRepositoryIMPL implements ICustomerRepository {
     @PersistenceContext
     private EntityManager entityManager;
+
     @Override
     public boolean insertWithStoredProcedure(Customer customer) {
         String sql = "CALL Insert_Customer(:firstName, :lastName)";

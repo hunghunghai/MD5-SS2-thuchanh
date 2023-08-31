@@ -4,8 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rikkei.academy.model.Customer;
 import rikkei.academy.repository.ICustomerRepository;
+
 @Service
-public class CustomerServiceIMPL implements ICustomerService{
+public class CustomerServiceIMPL implements ICustomerService {
     @Autowired
     private ICustomerRepository customerRepository;
 
